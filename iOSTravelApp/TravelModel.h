@@ -10,18 +10,20 @@
 
 // TravelModel.h
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface TravelModel : NSObject
 
-@property (nonatomic, strong) NSString *destinationName;
-@property (nonatomic, strong) NSString *descriptionText;
-@property (nonatomic, strong) NSString *imageURL;
-@property (nonatomic, strong) NSNumber *rating;
+@property (strong, nonatomic, readonly) NSArray *destinationNames;
 
-- (instancetype)initWithName:(NSString *)name
-                 description:(NSString *)descriptionText
-                     imageURL:(NSString *)imageURL
-                      rating:(NSNumber *)rating;
+// Shared instance (singleton)
++ (TravelModel *)sharedInstance;
+
+// Methods to retrieve data
+- (NSString *)getDestinationNameForIndex:(NSInteger)index;
+- (NSString *)getDestinationDescriptionWithName:(NSString *)name;
+- (UIImage *)getDestinationImageWithName:(NSString *)name;
+- (NSInteger)numberOfDestinations;
 
 @end
 
