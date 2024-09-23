@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		495645662CA0F68000290D82 /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495645652CA0F68000290D82 /* TripModel.swift */; };
+		495645682CA0F6AD00290D82 /* TripManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 495645672CA0F6AD00290D82 /* TripManager.m */; };
+		4956456B2CA0F71200290D82 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4956456A2CA0F71200290D82 /* AddTripViewController.swift */; };
 		822F969A2CA0CC590057B414 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822F96992CA0CC590057B414 /* TableViewController.swift */; };
 		822F969C2CA0E5DB0057B414 /* TripDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822F969B2CA0E5DB0057B414 /* TripDetailViewController.swift */; };
 		82FAD2002C9E56920024C3B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FAD1FF2C9E56920024C3B0 /* AppDelegate.swift */; };
@@ -19,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		495645652CA0F68000290D82 /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
+		495645672CA0F6AD00290D82 /* TripManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TripManager.m; sourceTree = "<group>"; };
+		495645692CA0F6CE00290D82 /* TripManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TripManager.h; sourceTree = "<group>"; };
+		4956456A2CA0F71200290D82 /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 		822F96992CA0CC590057B414 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		822F969B2CA0E5DB0057B414 /* TripDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailViewController.swift; sourceTree = "<group>"; };
 		82FAD1FC2C9E56920024C3B0 /* iOSTravelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTravelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +83,10 @@
 				82FAD20D2C9E56930024C3B0 /* Info.plist */,
 				82FAD2142C9E56AD0024C3B0 /* TravelModel.m */,
 				82FAD2162C9E56F00024C3B0 /* TravelModel.h */,
+				495645652CA0F68000290D82 /* TripModel.swift */,
+				495645672CA0F6AD00290D82 /* TripManager.m */,
+				495645692CA0F6CE00290D82 /* TripManager.h */,
+				4956456A2CA0F71200290D82 /* AddTripViewController.swift */,
 			);
 			path = iOSTravelApp;
 			sourceTree = "<group>";
@@ -154,7 +165,10 @@
 			files = (
 				822F969C2CA0E5DB0057B414 /* TripDetailViewController.swift in Sources */,
 				82FAD2042C9E56920024C3B0 /* ViewController.swift in Sources */,
+				495645682CA0F6AD00290D82 /* TripManager.m in Sources */,
 				82FAD2002C9E56920024C3B0 /* AppDelegate.swift in Sources */,
+				495645662CA0F68000290D82 /* TripModel.swift in Sources */,
+				4956456B2CA0F71200290D82 /* AddTripViewController.swift in Sources */,
 				82FAD2022C9E56920024C3B0 /* SceneDelegate.swift in Sources */,
 				822F969A2CA0CC590057B414 /* TableViewController.swift in Sources */,
 				82FAD2152C9E56AD0024C3B0 /* TravelModel.m in Sources */,

@@ -1,9 +1,9 @@
-//
-//  TableViewController.swift
-//  iOSTravelApp
-//
-//  Created by Max Havens on 9/22/24.
-//
+////
+////  TableViewController.swift
+////  iOSTravelApp
+////
+////  Created by Max Havens on 9/22/24.
+////
 
 import UIKit
 
@@ -141,5 +141,89 @@ class TableViewController: UITableViewController {
     }
     */
 
+}
+class TripListViewController: UITableViewController {
+    
+    var trips: [TripModel] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print("TripListViewController viewDidLoad")
+        title = "My Trips"
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "TripCell")
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewTrip))
+        
+        loadTrips()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("TripListViewController viewWillAppear")
+        loadTrips()
+        tableView.reloadData()
+    }
+    
+    func loadTrips() {
+        print("Loading trips")
+        trips = TripManager.shared().getAllTrips().sorted { $0.startDate < $1.startDate }
+        print("Loaded \(trips.count) trips")
+        for trip in trips {
+            print("Trip: \(trip.destination), Start: \(trip.startDate), End: \(trip.endDate), Upcoming: \(trip.isUpcoming)")
+        }
+    }
+    
+    @objc func addNewTrip() {
+        print("Add new trip tapped")
+        let addTripVC = AddTripViewController()
+        addTripVC.tripAddedCallback = { [weak self] in
+            print("Trip added callback received")
+            self?.loadTrips()
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+                print("Table view reloaded")
+            }
+        }
+        let navController = UINavigationController(rootViewController: addTripVC)
+        present(navController, animated: true, completion: nil)
+    }
+    
+    // MARK: - Table view data source
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let upcomingTrips = trips.filter { $0.isUpcoming }
+        let pastTrips = trips.filter { !$0.isUpcoming }
+        print("numberOfRowsInSection - Upcoming trips: \(upcomingTrips.count), Past trips: \(pastTrips.count)")
+        return section == 0 ? upcomingTrips.count : pastTrips.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TripCell", for: indexPath)
+        
+        let upcomingTrips = trips.filter { $0.isUpcoming }
+        let pastTrips = trips.filter { !$0.isUpcoming }
+        let trip = indexPath.section == 0 ? upcomingTrips[indexPath.row] : pastTrips[indexPath.row]
+        
+        cell.textLabel?.text = trip.destination
+        cell.detailTextLabel?.text = "\(formatDateForDisplay(trip.startDate)) - \(formatDateForDisplay(trip.endDate))"
+        
+        print("Configuring cell for trip: \(trip.destination), Upcoming: \(trip.isUpcoming)")
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return section == 0 ? "Upcoming Trips" : "Past Trips"
+    }
+    
+    private func formatDateForDisplay(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        return formatter.string(from: date)
+    }
 }
 

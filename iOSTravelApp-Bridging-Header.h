@@ -3,3 +3,4 @@
 //
 
 #import "TravelModel.h"
+#import "TripManager.h"
