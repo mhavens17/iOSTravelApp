@@ -1,3 +1,5 @@
+//NOW UNUSED...NOW USES TRIPMANAGER
+
 #import "TravelModel.h"
 
 @interface TravelModel ()
