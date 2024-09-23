@@ -5,10 +5,6 @@
 //  Created by Max Havens on 9/20/24.
 //
 
-//#ifndef TravelModel_h
-//#define TravelModel_h
-
-// TravelModel.h
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
@@ -23,8 +19,7 @@
 - (NSString *)getDestinationNameForIndex:(NSInteger)index;
 - (NSString *)getDestinationDescriptionWithName:(NSString *)name;
 - (UIImage *)getDestinationImageWithName:(NSString *)name;
+- (NSDate *)getDestinationDateWithName:(NSString *)name;
 - (NSInteger)numberOfDestinations;
 
 @end
-
-//#endif /* TravelModel_h */

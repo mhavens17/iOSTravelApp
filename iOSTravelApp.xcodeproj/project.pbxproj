@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		822F969A2CA0CC590057B414 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822F96992CA0CC590057B414 /* TableViewController.swift */; };
+		822F969C2CA0E5DB0057B414 /* TripDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822F969B2CA0E5DB0057B414 /* TripDetailViewController.swift */; };
 		82FAD2002C9E56920024C3B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FAD1FF2C9E56920024C3B0 /* AppDelegate.swift */; };
 		82FAD2022C9E56920024C3B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FAD2012C9E56920024C3B0 /* SceneDelegate.swift */; };
 		82FAD2042C9E56920024C3B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FAD2032C9E56920024C3B0 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		822F96992CA0CC590057B414 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		822F969B2CA0E5DB0057B414 /* TripDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailViewController.swift; sourceTree = "<group>"; };
 		82FAD1FC2C9E56920024C3B0 /* iOSTravelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTravelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82FAD1FF2C9E56920024C3B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82FAD2012C9E56920024C3B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +69,8 @@
 				82FAD2012C9E56920024C3B0 /* SceneDelegate.swift */,
 				82FAD2032C9E56920024C3B0 /* ViewController.swift */,
 				82FAD2052C9E56920024C3B0 /* Main.storyboard */,
+				822F969B2CA0E5DB0057B414 /* TripDetailViewController.swift */,
+				822F96992CA0CC590057B414 /* TableViewController.swift */,
 				82FAD2082C9E56930024C3B0 /* Assets.xcassets */,
 				82FAD20A2C9E56930024C3B0 /* LaunchScreen.storyboard */,
 				82FAD20D2C9E56930024C3B0 /* Info.plist */,
@@ -146,9 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				822F969C2CA0E5DB0057B414 /* TripDetailViewController.swift in Sources */,
 				82FAD2042C9E56920024C3B0 /* ViewController.swift in Sources */,
 				82FAD2002C9E56920024C3B0 /* AppDelegate.swift in Sources */,
 				82FAD2022C9E56920024C3B0 /* SceneDelegate.swift in Sources */,
+				822F969A2CA0CC590057B414 /* TableViewController.swift in Sources */,
 				82FAD2152C9E56AD0024C3B0 /* TravelModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

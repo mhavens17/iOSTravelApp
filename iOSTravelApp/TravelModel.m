@@ -33,35 +33,37 @@
 // Lazy initialization of destinations dictionary
 - (NSDictionary *)destinationsDict {
     if (!_destinationsDict) {
+        // Create the dictionary with all destinations (no images for now)
         _destinationsDict = @{
             @"Paris": @{
                     @"description": @"Description of Paris.",
-                    @"image": [UIImage imageNamed:@"paris.jpg"]
+                    @"date": [NSDate dateWithTimeIntervalSince1970:1625097600] // Example date
             },
             @"Tokyo": @{
                     @"description": @"Description of Tokyo.",
-                    @"image": [UIImage imageNamed:@"tokyo.jpg"]
+                    @"date": [NSDate dateWithTimeIntervalSince1970:1635696000] // Example date
             },
             @"New York": @{
                     @"description": @"Description of New York.",
-                    @"image": [UIImage imageNamed:@"nyc.jpg"]
+                    @"date": [NSDate dateWithTimeIntervalSince1970:1640995200] // Example date
             },
             @"London": @{
                     @"description": @"Description of London.",
-                    @"image": [UIImage imageNamed:@"london.jpg"]
+                    @"date": [NSDate dateWithTimeIntervalSince1970:1656633600] // Example date
             },
             @"Sydney": @{
                     @"description": @"Description of Sydney.",
-                    @"image": [UIImage imageNamed:@"sydney.jpg"]
+                    @"date": [NSDate dateWithTimeIntervalSince1970:1662316800] // Example date
             },
             @"Dubai": @{
                     @"description": @"Description of Dubai.",
-                    @"image": [UIImage imageNamed:@"dubai.jpg"]
+                    @"date": [NSDate dateWithTimeIntervalSince1970:1672444800] // Example date
             }
         };
     }
     return _destinationsDict;
 }
+
 
 // Get destination name by index
 - (NSString *)getDestinationNameForIndex:(NSInteger)index {
@@ -76,6 +78,11 @@
 // Get destination image by name
 - (UIImage *)getDestinationImageWithName:(NSString *)name {
     return self.destinationsDict[name][@"image"];
+}
+
+// New method: Get destination date by name
+- (NSDate *)getDestinationDateWithName:(NSString *)name {
+    return self.destinationsDict[name][@"date"];
 }
 
 // Get the total number of destinations
