@@ -20,11 +20,17 @@
 }
 
 - (void)saveTripWithDestination:(NSString *)destination startDate:(NSDate *)startDate endDate:(NSDate *)endDate {
-    TripModel *newTrip = [[TripModel alloc] initWithDestination:destination startDate:startDate endDate:endDate isFavorite:NO itinerary:@[] packingList:@[]];
+    TripModel *newTrip = [[TripModel alloc] initWithDestination:destination
+                                                      startDate:startDate
+                                                        endDate:endDate
+                                                     isFavorite:NO
+                                                      itinerary:@[]
+                                                    packingList:@[]];
     NSMutableArray *trips = [self getAllTripsAsMutableArray];
     [trips addObject:newTrip];
     [self saveTripsToDisk:trips];
 }
+
 
 - (NSArray<TripModel *> *)getAllTrips {
     return [self getAllTripsAsMutableArray];
