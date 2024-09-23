@@ -1,3 +1,6 @@
+//NOW UNUSED...NOW USES TRIPMANAGER
+
+
 //
 //  TravelModel.h
 //  iOSTravelApp
