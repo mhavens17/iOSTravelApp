@@ -110,4 +110,24 @@
     }
 }
 
+- (void)updateItineraryForTrip:(NSUUID *)tripId withItinerary:(NSArray<NSString *> *)itinerary {
+    // Get the mutable array of all trips
+    NSMutableArray *trips = [self getAllTripsAsMutableArray];
+    
+    // Find the trip by its unique ID
+    NSUInteger index = [trips indexOfObjectPassingTest:^BOOL(TripModel *obj, NSUInteger idx, BOOL *stop) {
+        return [obj.id isEqual:tripId];
+    }];
+    
+    // If trip is found, update the itinerary
+    if (index != NSNotFound) {
+        TripModel *trip = trips[index];
+        trip.itinerary = itinerary; // Update the itinerary
+        [self saveTripsToDisk:trips]; // Save all trips back to disk
+    } else {
+        NSLog(@"Trip not found to update itinerary.");
+    }
+}
+
+
 @end

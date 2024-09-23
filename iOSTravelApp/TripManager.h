@@ -25,6 +25,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)deleteTrip:(TripModel *)trip;
 
+- (void)updateItineraryForTrip:(NSUUID *)tripId withItinerary:(NSArray<NSString *> *)itinerary;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -170,7 +170,7 @@ class TripListViewController: UITableViewController {
         trips = TripManager.shared().getAllTrips().sorted { $0.startDate < $1.startDate }
         print("Loaded \(trips.count) trips")
         for trip in trips {
-            print("Trip: \(trip.destination), Start: \(trip.startDate), End: \(trip.endDate), Upcoming: \(trip.isUpcoming)")
+            print("Trip: \(trip.destination), Start: \(trip.startDate), End: \(trip.endDate), Upcoming: \(trip.isUpcoming), Itinerary: \(trip.itinerary.joined(separator: ", "))")
         }
     }
     

@@ -134,6 +134,54 @@
             </objects>
             <point key="canvasLocation" x="133.58778625954199" y="-2.1126760563380285"/>
         </scene>
+        <!--Itinerary View Controller-->
+        <scene sceneID="WvZ-zP-Vi0">
+            <objects>
+                <viewController storyboardIdentifier="ItineraryViewController" id="xxI-zc-INM" customClass="ItineraryViewController" customModule="iOSTravelApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4QI-CM-LxF">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="yN2-t4-ZFm">
+                                <rect key="frame" x="15" y="286" width="361" height="153"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="H60-2Q-bvR">
+                                        <rect key="frame" x="8" y="8" width="345" height="167"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">Choose Your Destination: Decide where you want to go.
+Set Travel Dates: Confirm your departure and return dates.
+Research Key Attractions: Identify must-see places and activities.
+Organize by Day: Allocate attractions or activities to specific days.
+Add Transportation &amp; Meals: Plan how you'll get around and where you'll eat.
+Allow Free Time: Leave room for spontaneity or rest.
+Finalize &amp; Review: Ensure everything fits comfortably into your schedule.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="odb-pq-xPY"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="1Fs-Pg-4z8"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="twL-Ji-ANK"/>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How to make an itinerary!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6l-pA-mrX">
+                                <rect key="frame" x="66" y="103" width="261" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="p0E-rg-rPO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZg-WD-ymK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-747.32824427480909" y="-658.45070422535218"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="nqz-rN-UOd">
             <objects>
