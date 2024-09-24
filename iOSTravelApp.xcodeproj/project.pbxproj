@@ -20,6 +20,8 @@
 		82FAD2092C9E56930024C3B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82FAD2082C9E56930024C3B0 /* Assets.xcassets */; };
 		82FAD20C2C9E56930024C3B0 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 82FAD20B2C9E56930024C3B0 /* Base */; };
 		82FAD2152C9E56AD0024C3B0 /* TravelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FAD2142C9E56AD0024C3B0 /* TravelModel.m */; };
+		CF6C31612CA25AD90046FD42 /* MoodCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6C31602CA25AD90046FD42 /* MoodCollectionViewController.swift */; };
+		CF6C31632CA25AF20046FD42 /* MoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6C31622CA25AF20046FD42 /* MoodCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		82FAD2132C9E56AD0024C3B0 /* iOSTravelApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSTravelApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		82FAD2142C9E56AD0024C3B0 /* TravelModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TravelModel.m; sourceTree = "<group>"; };
 		82FAD2162C9E56F00024C3B0 /* TravelModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TravelModel.h; sourceTree = "<group>"; };
+		CF6C31602CA25AD90046FD42 /* MoodCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCollectionViewController.swift; sourceTree = "<group>"; };
+		CF6C31622CA25AF20046FD42 /* MoodCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 				495645672CA0F6AD00290D82 /* TripManager.m */,
 				495645692CA0F6CE00290D82 /* TripManager.h */,
 				4956456A2CA0F71200290D82 /* AddTripViewController.swift */,
+				CF6C31602CA25AD90046FD42 /* MoodCollectionViewController.swift */,
+				CF6C31622CA25AF20046FD42 /* MoodCollectionViewCell.swift */,
 			);
 			path = iOSTravelApp;
 			sourceTree = "<group>";
@@ -166,6 +172,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF6C31612CA25AD90046FD42 /* MoodCollectionViewController.swift in Sources */,
+				CF6C31632CA25AF20046FD42 /* MoodCollectionViewCell.swift in Sources */,
 				822F969C2CA0E5DB0057B414 /* TripDetailViewController.swift in Sources */,
 				82FAD2042C9E56920024C3B0 /* ViewController.swift in Sources */,
 				495645682CA0F6AD00290D82 /* TripManager.m in Sources */,

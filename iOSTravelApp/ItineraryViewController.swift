@@ -10,13 +10,19 @@
 import UIKit
 
 class ItineraryViewController: UIViewController {
-    
+
+    //initilize relevant variables for the view
+    var currStrength: Int = 1
     var itinerary: [String]?
+    
+    @IBOutlet weak var moodStrength: UILabel!
     @IBOutlet weak var isPlanning: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //load default value for mood strength
+        moodStrength.text = "Mood Strength: \(currStrength)"
         view.backgroundColor = .white
         
         // Display the itinerary (you can add your own UI elements for this)
@@ -32,6 +38,16 @@ class ItineraryViewController: UIViewController {
             } else {
                 isPlanning.text = "Planning"
             }
+        }
+    }
+    @IBAction func step(_ sender: Any) {
+        // Safely cast sender to UIStepper
+        if let stepper = sender as? UIStepper {
+            // Update the moodStrength variable with the stepper's current value
+            currStrength = Int(stepper.value)
+            
+            // Update the label
+            moodStrength.text = "Mood Strength: \(currStrength)"
         }
     }
 }
